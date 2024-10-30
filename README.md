@@ -225,6 +225,6 @@ def forward(self, x):
 - **Convolutional Neural Network Results**
   The CNN on spectrogram data outperforms the feedforward network, with batch normalization and scheduling further improving accuracy and reducing misclassifications.
 
-##Conclusion
+## Conclusion
 
 This study finds CNNs with spectrogram input to be effective for genre classification. Techniques like batch normalization and learning rate scheduling further refine performance and reproducibility. Future work could explore deeper CNN architectures or recurrent models for improved temporal pattern analysis.
