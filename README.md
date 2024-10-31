@@ -25,6 +25,8 @@ label_mapping = {"classical": 0, "hiphop": 1, "rock_metal_hardrock": 2, "blues":
 y_train = np.vectorize(label_mapping.get)(y_train)
 ```
 
+![MusicData](images/dataiMAGE.png)
+
 - **Fully connected neural network** with three hidden layers and ReLU activation functions
 
 ```python
@@ -86,6 +88,8 @@ loss_function = torch.nn.CrossEntropyLoss()
 trained_model = train_model(model, epochs=30, optimizer=optimizer, dataloader=train_dataloader, loss_function=loss_function)
 test_accuracy, test_confusion_matrix = evaluate(trained_model, test_dataloader, loss_function)
 ```
+
+![TrainingValidation](images/trainVal.png)
 
 ## Convolutional Neural Network
 
@@ -176,6 +180,9 @@ class ModifiedNetwork(nn.Module):
         return x
 ```
 
+![ActivationTests](images/activationTests.png)
+![OptimizerTests](images/optimizerTests.png)
+
 - **Learning Rate Schedulers**
 
 ```python
@@ -208,6 +215,8 @@ for name, scheduler_info in list(schedulers.items())[:10]:
     val_f1_list = []
 ```
 
+![learningSchedulerTests](images/learningSchedulerTests.png)
+
 - **Batch Normalization**
 
 ```python
@@ -217,6 +226,8 @@ def forward(self, x):
     x = self.bn1(F.relu(self.fc1(x)))
     return x
 ```
+
+![batchNormalization](images/batchNormalizationTests.png)
 
 ## Results Analysis 
 - **Feedforward Neural Network Results**
